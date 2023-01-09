@@ -7,7 +7,7 @@ type Res = {
 };
 
 const cors = Cors({
-  // origin: Config.apiOrigin,
+  origin: "*",
   methods: ['POST', 'GET', 'HEAD'],
 });
 
@@ -31,7 +31,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Res>
 ) {
-  // await runMiddleware(req, res, cors);
+  await runMiddleware(req, res, cors);
   
   const { email } = req.body;
 
