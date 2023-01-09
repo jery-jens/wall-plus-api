@@ -53,7 +53,7 @@ export default async function handler(
       return await res.json();
     })
     .then(() => {
-      res.status(200).json({message: 'You have been pawnded'});
+      res.status(200).json({message: 'You have been pawnded!'});
     })
     .catch(() => {
       res.status(200).json({ message: 'You have not been pawned!' });
